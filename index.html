@@ -171,4 +171,5 @@ $('volume').oninput=()=>audio.volume=Number($('volume').value);
 audio.onended=()=>{if(tracks.length)playTrack((current+1)%tracks.length)};
 (async()=>{try{db=await openDB();await loadTracks()}catch(e){$('library').innerHTML='<div class="empty">এই ব্রাউজারে লোকাল মিউজিক স্টোরেজ চালু করা যায়নি।</div>'}if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{})})();
 </script>
-</body></html>
+</body>
+</html>
